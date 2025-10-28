@@ -1,2 +1,10 @@
 # AI-powered-Gesture-Based-Mouse
 AI-powered system to control your computer using hand gestures.
+<p>The AI-Powered Mouse is an intelligent system that allows users to control their computer using hand gestures detected through a webcam. It leverages computer vision and machine learning techniques to provide a hands-free interaction experience. The system primarily uses OpenCV for video capture, MediaPipe for real-time hand tracking, and PyAutoGUI for executing mouse control actions such as movement, clicking, and scrolling.
+
+When the program starts, it initializes the webcam and sets up MediaPipe’s hand tracking module to detect key landmarks on the hand. Once a hand is detected, the system identifies the position of the fingers and determines whether each finger is raised or lowered. Based on these gestures, specific mouse actions are triggered. For example, lowering the pinky finger locks or unlocks the cursor, a single index finger tap performs a left click, while the middle finger triggers a right click. Combining multiple fingers enables scrolling up or down.
+
+To ensure smooth and stable cursor movement, an Exponential Moving Average (EMA) filter is applied to the fingertip coordinates, reducing jitter caused by small hand tremors. A cooldown mechanism prevents accidental multiple clicks by enforcing a short delay between consecutive actions. Additionally, when the hand leaves the camera’s view, the system pauses control to avoid unwanted movements.
+
+Overall, this workflow demonstrates how AI and computer vision can be combined to create an efficient and intuitive gesture-based human-computer interaction system. It eliminates the need for traditional hardware like a mouse or touchpad, showcasing the potential of AI-powered automation and gesture recognition in enhancing user experience and accessibility.
+</p>
